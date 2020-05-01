@@ -485,7 +485,7 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-$(document).click(function() {
+$("#start").click(function() {
   if (!started) {
     $("#level-title").text("Level " + level);
     nextSequence();
@@ -515,7 +515,7 @@ function checkAnswer(currentLevel) {
     } else {
       playSound("wrong");
       $("body").addClass("game-over");
-      $("#level-title").text("Game Over, Refresh to Restart");
+      $("#level-title").text("Game Over, Refresh Page");
 
       setTimeout(function () {
         $("body").removeClass("game-over");
